@@ -29,6 +29,8 @@ This project is a chatbot that uses the RAG (Retrieval-Augmented Generation) mod
 1. **Install dependencies :**
     ```sh
     pip install -r requirements.txt
+    pip install -e .
+
     ```
 
 1. **Set up your Guardian API key:**

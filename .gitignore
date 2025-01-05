@@ -1,1 +1,4 @@
-activate # script to activate venv
+activate
+__pycache__
+data/**
+**/*.egg-info
