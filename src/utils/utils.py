@@ -1,4 +1,5 @@
 import keyring
+import yaml
 
 def get_api_key(key_name: str) -> str:
     """
@@ -17,3 +18,17 @@ def get_api_key(key_name: str) -> str:
     if api_key is None:
         raise ValueError("API key not found in Keyring!")
     return api_key
+
+
+def read_yaml(path: str) -> dict:
+    """
+    Get dict from a yaml file
+
+    Args:
+        path (str): Path to the yaml file.
+
+    Returns:
+        dict: The yaml file as a dict.
+    """
+    with open(path, "r") as f:
+        return yaml.safe_load(f)

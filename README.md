@@ -50,3 +50,5 @@ TBA
 ...
 ```
 
+## To Do
+[ ] add a script to update table with new recipes
