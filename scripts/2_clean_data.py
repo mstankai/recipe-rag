@@ -11,6 +11,9 @@ def main() -> None:
     print(f"Cleaning data from {data_folder / input_file}...")
     df = pd.read_csv(data_folder / input_file)
     df.fillna('', inplace=True)
+    cols = df.columns
+    df['id'] = df.index
+    df = df[['id'] + list(cols)]
     df['section'] = (
         df['section']
         .str.replace("Masterclasss", "Masterclass")

@@ -43,6 +43,15 @@ This project is a chatbot that uses the RAG (Retrieval-Augmented Generation) mod
     You will need this to download the Guardian Recipes.
 
 
+1. **Set up OpenAI API key:**
+    You can set up an API key on the Open AI Platform page, here: [OpenAI Platform | API Keys](https://platform.openai.com/api-keys).
+
+    Store your OpenAI API key in your system's keychain using the following command:
+    ```sh
+    python -c 'import keyring; keyring.set_password("system", "openai_api_key", "<your-api-key>")'
+    ```sh
+
+
 ## Usage
 
 TBA
@@ -51,4 +60,8 @@ TBA
 ```
 
 ## To Do
-[ ] add a script to update table with new recipes
+[ ] add makefile
+[ ] mini stramlit app to interact with the chatbot
+[ ] host streamlit app? 
+[ ] evaluate rag
+[ ] add code to update rather than overwrite tables

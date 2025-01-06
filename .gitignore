@@ -1,5 +1,6 @@
 activate
 __pycache__
 data/**
+embeddings/**
 **/*.egg-info
 .DS_Store
