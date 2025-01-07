@@ -111,19 +111,20 @@ def main() -> None:
             system_message = {"role": "system", "content": system_prompt}
             st.session_state["chat_history"].append(system_message)
         
-        else:
-            # print user text
-            st.chat_message("user").write(query)
-            st.session_state["chat_history"].append({"role": "user", "content": query})
+        # print user text
+        st.chat_message("user").write(query)
+        st.session_state["chat_history"].append({"role": "user", "content": query})
             
-            # check if we need to end the chat
-            user_prompts = get_user_prompts(st.session_state.chat_history)
-            n_user_prompts = len(user_prompts)
-            if n_user_prompts > max_prompts:
-                goodbye = get_goodbye()
-                st.chat_message("assistant").write(goodbye)
-                st.session_state["chat_history"].append({"role": "assistant", "content": goodbye})
+        # check if we need to end the chat
+        user_prompts = get_user_prompts(st.session_state.chat_history)
+        n_user_prompts = len(user_prompts)
 
+        if n_user_prompts > max_prompts:
+            goodbye = get_goodbye()
+            st.chat_message("assistant").write(goodbye)
+            st.session_state["chat_history"].append({"role": "assistant", "content": goodbye})
+
+        else:
             # removed to allow follow-up questions 
             # # remove previous recipe prompts        
             # for i, chat in enumerate(st.session_state.chat_history):
