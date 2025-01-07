@@ -1,4 +1,7 @@
 api_key_name : "recipe_rag_openai_api_key"
 model: "gpt-4o-mini"
+data_folder : "data/"
+data_file : "guardian_data_rag_input.csv"
 embeddings_folder : "embeddings"
 embeddings_file : "recipe_embeddings.index"
+

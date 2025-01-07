@@ -1,6 +1,10 @@
-# Guardian Recipe Chatbot
+# ROB: The Recipe Opinion Bot 
 
 A RAG-based chatbot for interactions with Guardian Recipes.
+UI for the chatbot is built using Streamlit.
+The data is retrieved from the Guardian Open Platform API.
+
+![Guardian Recipe Chatbot Screenshot](./lib/rob.png)
 
 ## Table of Contents
 
@@ -53,15 +57,21 @@ This project is a chatbot that uses the RAG (Retrieval-Augmented Generation) mod
 
 
 ## Usage
+### Configure
+There are two congiguration files in the `config` directory:
+- `data_config.json`: contains the configuration for the data retrieval
+- `rag_config.json`: contains the configuration for the RAG model
 
-TBA
-```sh
-...
-```
+### Produce data
+Run the scripts in the `scripts` directory in order to produce the data and embeddings needed for the chatbot.
+``` python scripts/xxx.py```
+
+### Run the app
+Run the streamlit app to interact with the chatbot.
+``` streamlit run app/🍡 recipe_recomender.py```
 
 ## To Do
 [ ] add makefile
-[ ] mini stramlit app to interact with the chatbot
 [ ] host streamlit app? 
 [ ] evaluate rag
-[ ] add code to update rather than overwrite tables
+[ ] add code to update rather than overwrite tables and embeddings
