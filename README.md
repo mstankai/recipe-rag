@@ -74,8 +74,7 @@ python scripts/xxx.py
 Run the streamlit app to interact with the chatbot.
 ```sh
 streamlit run app/🍡 recipe_recomender.py
+```
 
 ### Questions and comments
 Feel free to contact me if you have any questions, comments, or ideas!
-
-```
